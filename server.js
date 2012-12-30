@@ -2,6 +2,7 @@ var http = require('http');
 
 var server = http.createServer(function (req, res) {
     res.setHeader('access-control-allow-origin', '*');
-    res.end('beep boop\n');
+    res.write(process.argv.slice(3).join(' ') || 'beep boop');
+    res.end('\n');
 });
-server.listen(8642);
+server.listen(process.argv[2] || 8642);
