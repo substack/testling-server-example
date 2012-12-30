@@ -1,0 +1,16 @@
+{
+    "name" : "testling-server-example",
+    "version" : "0.0.0",
+    "devDependencies" : {
+        "tape" : "~0.1.5"
+    },
+    "testling" : {
+        "files" : "test/*.js",
+        "server" : "node server.js 8642",
+        "browsers" : {
+            "iexplore" : [ "9.0" ],
+            "chrome" : [ "20.0" ],
+            "firefox" : [ "10.0" ]
+        }
+    }
+}
